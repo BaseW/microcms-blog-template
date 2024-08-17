@@ -5,14 +5,18 @@ import Footer from '@/components/Footer';
 import Nav from '@/components/Nav';
 import './globals.css';
 import styles from './layout.module.css';
+import { Metadata } from 'next';
 
-export const metadata = {
+const TITLE = 'アラサーエンジニアの日常';
+const DESC = 'アラサーのエンジニアによる日々のメモ';
+
+export const metadata: Metadata = {
   metadataBase: new URL(process.env.BASE_URL || 'http://localhost:3000'),
-  title: 'Simple Blog',
-  description: 'A simple blog presented by microCMS',
+  title: TITLE,
+  description: DESC,
   openGraph: {
-    title: 'Simple Blog',
-    description: 'A simple blog presented by microCMS',
+    title: TITLE,
+    description: DESC,
     images: '/ogp.png',
   },
   alternates: {
